@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/stephen-cox-geology/static/css/main.98c5be4c.css",
-    "main.js": "/stephen-cox-geology/static/js/main.ebea7eca.js",
+    "main.js": "/stephen-cox-geology/static/js/main.a22ad9f9.js",
     "index.html": "/stephen-cox-geology/index.html",
     "main.98c5be4c.css.map": "/stephen-cox-geology/static/css/main.98c5be4c.css.map",
-    "main.ebea7eca.js.map": "/stephen-cox-geology/static/js/main.ebea7eca.js.map"
+    "main.a22ad9f9.js.map": "/stephen-cox-geology/static/js/main.a22ad9f9.js.map"
   },
   "entrypoints": [
     "static/css/main.98c5be4c.css",
-    "static/js/main.ebea7eca.js"
+    "static/js/main.a22ad9f9.js"
   ]
 }
