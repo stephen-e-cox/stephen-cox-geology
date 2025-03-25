@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(3, 3, 3);
 }
 
 .App-link {
@@ -35,4 +35,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #000000;
+  color: #FFD700;
+}
+
+.text-gold {
+  color: #FFD700 !important;
+}
+
+.bg-black {
+  background-color: #000000 !important;
+}
+
+.link-gold {
+  color: #FFD700;
+  text-decoration: underline;
+}
+
+.link-gold:hover {
+  color: #FFC300;
+  text-decoration: none;
 }
