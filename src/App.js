@@ -6,11 +6,11 @@ import './App.css';
 const Home = () => (
   <div className="container text-center py-5 text-gold">
     <picture>
-      <source srcSet="images/landscape.webp" type="image/webp" />
+      <source srcSet="/images/landscape.webp" type="image/webp" />
       <source media="(min-width: 1200px)" srcSet="/images/landscape-1920.jpg" />
       <source media="(min-width: 768px)" srcSet="/images/landscape-768.jpg" />
       <img
-        src="images/landscape-320.jpg"
+        src="/images/landscape-320.jpg"
         alt="Landscape"
         className="img-fluid mb-4 rounded"
         loading="lazy"
