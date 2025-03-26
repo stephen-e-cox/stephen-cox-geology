@@ -108,7 +108,7 @@ const Navbar = () => (
 
 const App = () => (
   <div className="bg-black min-vh-100">
-    <Router basename="/stephen-cox-geology">
+    <Router basename="/">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
