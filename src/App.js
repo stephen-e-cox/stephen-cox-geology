@@ -26,16 +26,12 @@ const Home = () => {
       </picture>
       <h1>Stephen E. Cox</h1>
       <p className="lead">Geologist | Research Scientist</p>
-    </div>
-  );
-};
-
-const Bio = () => {
-  usePageTitle("Bio – Stephen E. Cox");
-  return (
-    <div className="container py-5 text-gold">
-      <h2>Bio</h2>
-      <p>I am a geochronologist and noble gas geochemist in New York. I have a PhD in Geochemistry from Caltech. My research interests include noble gas mass spectrometry, geochronology and thermochronology, earthquake hazard, and deep time tectonic processes. As an undergraduate, I conducted research on erosion rates in East Antarctica using detrital thermochronology. As a grad student, I worked on projects involving the development of (U-Th)/Ne, U-Kr, and U-Xr dating techniques. My current research projects include noble gas mass spectrometer developent, the dating of very young volcanic rocks, the evolution of the Turkana Basin and the East African Rift, and the tectonic and thermal histories of important features in the western United States such as the San Andreas Fault, the Basin and Range, and the Great Unconformity.</p>
+      <div className="mt-5 p-4 rounded" style={{ backgroundColor: "#1a1a1a", maxHeight: "300px", overflowY: "auto" }}>
+        <h3 className="text-gold">Bio</h3>
+        <p className="text-gold">
+          I am a geochronologist and noble gas geochemist in New York. I have a PhD in Geochemistry from Caltech. My research interests include noble gas mass spectrometry, geochronology and thermochronology, earthquake hazard, and deep time tectonic processes. As an undergraduate, I conducted research on erosion rates in East Antarctica using detrital thermochronology. As a grad student, I worked on projects involving the development of (U-Th)/Ne, U-Kr, and U-Xr dating techniques. My current research projects include noble gas mass spectrometer developent, the dating of very young volcanic rocks, the evolution of the Turkana Basin and the East African Rift, and the tectonic and thermal histories of important features in the western United States such as the San Andreas Fault, the Basin and Range, and the Great Unconformity.
+        </p>
+      </div>
     </div>
   );
 };
@@ -55,7 +51,7 @@ const Research = () => {
   return (
     <div className="container py-5 text-gold">
       <h2>Research Projects</h2>
-      <h4>Next generation noble gas mass spectrometry</h4>
+      <h4>Next generaition noble gas mass spectrometry</h4>
       <p>Developing a new generation of high sensitivity, high resolution noble gas mass spectrometers.</p>
       <h4>Fault dating and earthquake hazard</h4>
       <p>Fault rock earthquake dating project.</p>
@@ -95,7 +91,6 @@ const Navbar = () => (
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto">
-          <li className="nav-item"><Link className="nav-link text-gold" to="/bio">Bio</Link></li>
           <li className="nav-item"><Link className="nav-link text-gold" to="/cv">CV</Link></li>
           <li className="nav-item"><Link className="nav-link text-gold" to="/research">Research</Link></li>
           <li className="nav-item"><Link className="nav-link text-gold" to="/consulting">Consulting</Link></li>
@@ -108,11 +103,10 @@ const Navbar = () => (
 
 const App = () => (
   <div className="bg-black min-vh-100">
-    <Router basename="/">
+    <Router basename="/stephen-cox-geology">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bio" element={<Bio />} />
         <Route path="/cv" element={<CV />} />
         <Route path="/research" element={<Research />} />
         <Route path="/consulting" element={<Consulting />} />
