@@ -14,11 +14,11 @@ const Home = () => {
   return (
     <div className="container text-center py-5 text-gold">
       <picture>
-        <source srcSet="/images/landscape.webp" type="image/webp" />
-        <source media="(min-width: 1200px)" srcSet="/images/landscape-1920.jpg" />
-        <source media="(min-width: 768px)" srcSet="/images/landscape-768.jpg" />
+        <source srcSet={`${process.env.PUBLIC_URL}/images/landscape.webp`} type="image/webp" />
+        <source media="(min-width: 1200px)" srcSet={`${process.env.PUBLIC_URL}/images/landscape-1920.jpg`} />
+        <source media="(min-width: 768px)" srcSet={`${process.env.PUBLIC_URL}/images/landscape-768.jpg`} />
         <img
-          src="/images/landscape-320.jpg"
+          src={`${process.env.PUBLIC_URL}/images/landscape-320.jpg`}
           alt="Landscape"
           className="img-fluid mb-4 rounded"
           loading="lazy"
