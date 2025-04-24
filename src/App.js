@@ -73,6 +73,8 @@ const Research = () => {
       <p>Fault rock earthquake dating project.</p>
       <h4>Synchrotron X-ray fluorescence tomography</h4>
       <p>3-D mapping of uranium, thorium, and other elemnets in apatite and zircon for thermochronology.</p>
+      <h4>Turkana Miocene Project</h4>
+      <p>I am deeply involved in 40Ar/39Ar dating for the Turkana Miocene Project, focusing on early hominid evolution, rift evolution, and deep time climate.</p>
     </div>
   );
 };
