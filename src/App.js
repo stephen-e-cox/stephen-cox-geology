@@ -27,22 +27,23 @@ const Home = () => {
       <h1>Stephen E. Cox</h1>
       <p className="lead">Geologist | Research Scientist</p>
       <div className="mt-5 p-4 rounded" style={{ backgroundColor: "#1a1a1a", maxHeight: "400px", overflowY: "auto" }}>
-        <h3 className="text-gold">Bio</h3>
-        <div className="d-flex align-items-center mb-3">
-          <picture>
-            <source srcSet={`${process.env.PUBLIC_URL}/images/profile.webp`} type="image/webp" />
-            <source srcSet={`${process.env.PUBLIC_URL}/images/profile.jpg`} type="image/jpeg" />
-            <img
-              src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
-              alt="Profile"
-              style={{ width: "120px", height: "120px", objectFit: "cover" }}
-              className="rounded me-4"
-              loading="lazy"
-            />
-          </picture>
-          <p className="text-gold fs-5 fw-semibold mb-0">
-            Researching the deep-time history of the Earth through noble gas geochemistry.
-          </p>
+        <div className="d-flex flex-column align-items-center text-center mb-3">
+          <div className="d-flex align-items-center justify-content-center flex-wrap">
+            <picture>
+              <source srcSet={`${process.env.PUBLIC_URL}/images/profile.webp`} type="image/webp" />
+              <source srcSet={`${process.env.PUBLIC_URL}/images/profile.jpg`} type="image/jpeg" />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
+                alt="Profile"
+                style={{ width: "120px", height: "120px", objectFit: "cover" }}
+                className="rounded me-4 mb-2"
+                loading="lazy"
+              />
+            </picture>
+            <p className="text-gold fs-5 fw-semibold mb-0 align-self-center">
+              Researching the deep-time history of the Earth through noble gas geochemistry.
+            </p>
+          </div>
         </div>
         <p className="text-gold">
           I am a geochronologist and noble gas geochemist in New York. I have a PhD in Geochemistry from Caltech. My research interests include noble gas mass spectrometry, geochronology and thermochronology, earthquake hazard, and deep time tectonic processes. As an undergraduate, I conducted research on erosion rates in East Antarctica using detrital thermochronology. As a grad student, I worked on projects involving the development of (U-Th)/Ne, U-Kr, and U-Xr dating techniques. My current research projects include noble gas mass spectrometer developent, the dating of very young volcanic rocks, the evolution of the Turkana Basin and the East African Rift, and the tectonic and thermal histories of important features in the western United States such as the San Andreas Fault, the Basin and Range, and the Great Unconformity.
