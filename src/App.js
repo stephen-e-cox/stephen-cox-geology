@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { HashRouter as Router, Route, Routes, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import CVDetails from "./Cvpage"; // 👈 new import
 
 const usePageTitle = (title) => {
   useEffect(() => {
@@ -41,7 +42,7 @@ const Home = () => {
               />
             </picture>
             <p className="text-gold fs-5 fw-semibold mb-0 align-self-center">
-              Researching the deep-time history of the Earth through noble gas geochemistry.
+              Researching the deep-time history of the Earth through noble gas geochemistry
             </p>
           </div>
         </div>
@@ -128,7 +129,7 @@ const App = () => (
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cv" element={<CV />} />
+        <Route path="/cv" element={<CVDetails />} />
         <Route path="/research" element={<Research />} />
         <Route path="/consulting" element={<Consulting />} />
         <Route path="/code" element={<CodeLinks />} />
