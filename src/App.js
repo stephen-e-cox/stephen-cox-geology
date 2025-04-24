@@ -71,6 +71,8 @@ const Research = () => {
       <p>Developing a new generation of high sensitivity, high resolution noble gas mass spectrometers.</p>
       <h4>Fault dating and earthquake hazard</h4>
       <p>Fault rock earthquake dating project.</p>
+      <h4>Synchrotron X-ray fluorescence tomography</h4>
+      <p>3-D mapping of uranium, thorium, and other elemnets in apatite and zircon for thermochronology.</p>
     </div>
   );
 };
