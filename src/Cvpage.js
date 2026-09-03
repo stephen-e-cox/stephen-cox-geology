@@ -1,4 +1,67 @@
 import React from "react";
+import publications from "./data/publications.json";
+
+const getYear = (publication) =>
+  publication.issued?.["date-parts"]?.[0]?.[0];
+
+const formatAuthors = (authors = []) => {
+  const names = authors.map(({ given, family, literal }) =>
+    literal || [given, family].filter(Boolean).join(" ")
+  );
+
+  if (names.length <= 1) {
+    return names[0] || "";
+  }
+
+  return `${names.slice(0, -1).join(", ")}, and ${
+    names[names.length - 1]
+  }`;
+};
+
+const PublicationList = () => {
+  // Remove this filter if you want theses and other entry types too.
+  const journalArticles = publications.filter(
+    (publication) => publication.type === "article-journal"
+  );
+
+  return (
+    <ol>
+      {journalArticles.map((publication) => {
+        const year = getYear(publication);
+        const doi = publication.DOI;
+        const url = doi
+          ? `https://doi.org/${doi}`
+          : publication.URL;
+
+        return (
+          <li key={publication.id}>
+            {formatAuthors(publication.author)}
+            {publication.title && <>, “{publication.title},”</>}
+            {publication["container-title"] && (
+              <> <em>{publication["container-title"]}</em></>
+            )}
+            {publication.volume && `, vol. ${publication.volume}`}
+            {publication.issue && `, no. ${publication.issue}`}
+            {publication.page && `, pp. ${publication.page}`}
+            {year && `, ${year}`}.
+            {url && (
+              <>
+                {" "}
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {doi || "View publication"}
+                </a>
+              </>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  );
+};
 
 const CVDetails = () => (
   <div className="container py-5 text-gold">
@@ -25,8 +88,7 @@ const CVDetails = () => (
 
     <section className="mb-4">
       <h4>Journal Articles</h4>
-      Bibbase
-      <script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fnetwork%2Ffiles%2FwRnnfK3uuPp6eT5xd&noBootstrap=1&jsonp=1"></script>
+      <PublicationList />
     </section>
 
     <p>Download my full CV <a href="/Stephen_Cox_CV.pdf" target="_blank" rel="noopener noreferrer" className="link-gold">here</a>.</p>

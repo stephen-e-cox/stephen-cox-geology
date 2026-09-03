@@ -17,10 +17,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "convert-publications": "node scripts/build-publications.mjs",
+    "prebuild": "npm run convert-publications",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "NODE_OPTIONS=--no-experimental-webstorage npm run build",
     "deploy": "gh-pages -d build --cname stephencoxgeology.com"
   },
   "eslintConfig": {
@@ -43,6 +45,8 @@
   },
   "homepage": "https://stephencoxgeology.com/",
   "devDependencies": {
+    "@citation-js/core": "^0.8.2",
+    "@citation-js/plugin-bibtex": "^0.8.2",
     "gh-pages": "^6.3.0"
   }
 }
