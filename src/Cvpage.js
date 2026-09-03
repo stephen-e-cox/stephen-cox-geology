@@ -25,6 +25,7 @@ const CVDetails = () => (
 
     <section className="mb-4">
       <h4>Journal Articles</h4>
+      Bibbase
       <script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fnetwork%2Ffiles%2FwRnnfK3uuPp6eT5xd&noBootstrap=1&jsonp=1"></script>
     </section>
 
